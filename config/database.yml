@@ -1,8 +1,7 @@
-
 development:
   adapter: postgresql
   database: save_animals_development
 
- test:
+test:
   adapter: postgresql
   database: save_animals_test

@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'pry'
 gem 'jquery-turbolinks'
 gem 'foundation-rails'
+gem 'bcrypt-ruby', :require => 'bcrypt'
 
 group :development do
   gem 'better_errors'
