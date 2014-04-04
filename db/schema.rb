@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140404171025) do
+ActiveRecord::Schema.define(version: 20140404181815) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,11 @@ ActiveRecord::Schema.define(version: 20140404171025) do
     t.integer "animal_id"
   end
 
+  create_table "mix_breeds", force: true do |t|
+    t.integer "breed_id"
+    t.integer "profile_id"
+  end
+
   create_table "profiles", force: true do |t|
     t.string  "name"
     t.string  "gender"
@@ -33,7 +38,6 @@ ActiveRecord::Schema.define(version: 20140404171025) do
     t.text    "description"
     t.string  "picture"
     t.integer "animal_id"
-    t.integer "profile_id"
     t.integer "user_id"
   end
 
