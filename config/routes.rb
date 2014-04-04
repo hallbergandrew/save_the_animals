@@ -1,4 +1,5 @@
 SaveAnimals::Application.routes.draw do
+  root :to => 'animals#index'
 
   resources :animals do
     resources :breeds

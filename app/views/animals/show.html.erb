@@ -1,2 +1,12 @@
 <h1>Animals#show</h1>
-<p>Find me in app/views/animals/show.html.erb</p>
+
+<h3><%= @animal.name %></h3>
+<ul>
+<li><%= link_to "Animal Index", animals_path, :class=> "btn btn-default" %></li>
+<li><%= link_to "Edit", edit_animal_path, :class=> "btn btn-default" %></li>
+
+<li><%= link_to "Delete", animal_path(@animal),
+              :confirm => "You sure?",
+              :method => "delete" %></li>
+
+</ul>

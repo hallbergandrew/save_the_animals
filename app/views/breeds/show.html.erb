@@ -1,2 +1,12 @@
 <h1>Breeds#show</h1>
-<p>Find me in app/views/breeds/show.html.erb</p>
+
+<h3><%= @breed.name %></h3>
+<ul>
+<li><%= link_to "Breed Index", breeds_path, :class=> "btn btn-default" %></li>
+<li><%= link_to "Edit", edit_breed_path, :class=> "btn btn-default" %></li>
+
+<li><%= link_to "Delete", breed_path(@breed),
+              :confirm => "You sure?",
+              :method => "delete" %></li>
+
+</ul>

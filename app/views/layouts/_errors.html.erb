@@ -1,0 +1,20 @@
+<% if @animal != nil %>
+  <% if @animal.errors.any? %>
+    <ul>
+      <% @animal.errors.full_messages.each do |message| %>
+       <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+<% elsif @breed != nil %>
+    <% if @breed.errors.any? %>
+      <ul>
+        <% @breed.errors.full_messages.each do |message| %>
+         <li><%= message %></li>
+        <% end %>
+      </ul>
+    <% end %>
+<% else %>
+
+<% end %>
