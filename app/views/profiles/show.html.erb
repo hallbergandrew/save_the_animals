@@ -1,2 +1,11 @@
-<h1>Profiles#show</h1>
-<p>Find me in app/views/profiles/show.html.erb</p>
+
+  <h1><%= @profile.name %></h1>
+
+  <img src="<%= @profile.picture %>">
+  <p>Name: <%= @profile.name %></p>
+  <p>Gender: <%= @profile.gender %></p>
+  <p>Weight: <%= @profile.weight %> Lbs</p>
+  <p>Age: <%= @profile.age %> years young</p>
+  <p>Description: <%= @profile.description %></p>
+
+

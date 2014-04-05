@@ -7,14 +7,57 @@
     <title><%= content_for?(:title) ? yield(:title) : "Save-An-Animal" %></title>
 
     <%= stylesheet_link_tag    "application" %>
-    <%#= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
+    <nav class="top-bar " data-topbar>
+  <ul class="title-area">
+    <li class="name ">
+      <h1><a href="/profiles">Pet Saver</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon "><a href="#">Menu</a></li>
+  </ul>
+
+  <section class="top-bar-section ">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="active "><a href="/users">Sign up!</a></li>
+      <li class="has-dropdown ">
+        <div class="pink">
+          <a href="/users/new">Sign in</a>
+        </div>
+        <ul class="dropdown blue">
+          <li><a href="#">Log in</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- Left Nav Section -->
+    <ul class="left">
+      <li class="has-form">
+        <div class="row collapse">
+          <div class="large-8 small-9 columns">
+            <input type="text" placeholder="Search">
+          </div>
+          <div class="large-4 small-3 columns">
+            <a href="#" class="alert button expand">Go</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section>
+</nav>
     <%= flash[:notice] %>
     <%= flash[:alert] %>
+<div class="twelve columns">
     <%= yield %>
-    <%= javascript_include_tag "application" %>
+</div>
+
+
   </body>
 </html>

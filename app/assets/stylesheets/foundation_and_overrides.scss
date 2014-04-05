@@ -1091,6 +1091,7 @@
 // $thumb-border-color: #fff;
 // $thumb-box-shadow: 0 0 0 1px rgba(#000,.2);
 // $thumb-box-shadow-hover: 0 0 6px 1px rgba($primary-color,0.5);
+   $thumb-min-width: 100px;
 
 // Radius and transition speed for thumbs
 // $thumb-radius: $global-radius;
@@ -1130,7 +1131,7 @@
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-// $topbar-bg-color: #333;
+ $topbar-bg-color: pink;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
