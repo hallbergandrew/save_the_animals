@@ -1,7 +1,8 @@
-<h1> Pick a Country </h1>
+<h1> All Countries</h1>
 <ul>
 <% @countries.each do |country| %>
-  <li><%=link_to "#{country.name}", country_path(country) %></li>
+  <li><%=link_to "#{country.name}", country_path(country) %>
+      <%=link_to "Delete", </li>
   <% end %>
 </ul>
 
