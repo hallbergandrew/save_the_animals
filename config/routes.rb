@@ -15,6 +15,8 @@ SaveAnimals::Application.routes.draw do
     resources :profiles
   end
 
+  resources :countries
+
 
 
 
