@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140409002114) do
+ActiveRecord::Schema.define(version: 20140413010213) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,18 @@ ActiveRecord::Schema.define(version: 20140409002114) do
     t.string "name"
   end
 
+  create_table "documents", force: true do |t|
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "attachment_file_name"
+    t.string   "attachment_content_type"
+    t.integer  "attachment_file_size"
+    t.datetime "attachment_updated_at"
+  end
+
+  add_index "documents", ["user_id"], name: "index_documents_on_user_id", using: :btree
+
   create_table "mix_breeds", force: true do |t|
     t.integer "breed_id"
     t.integer "profile_id"
@@ -48,6 +60,7 @@ ActiveRecord::Schema.define(version: 20140409002114) do
     t.string  "picture"
     t.integer "animal_id"
     t.integer "user_id"
+    t.integer "document_id"
   end
 
   create_table "states", force: true do |t|
@@ -58,10 +71,10 @@ ActiveRecord::Schema.define(version: 20140409002114) do
   create_table "users", force: true do |t|
     t.string   "username"
     t.string   "email"
-    t.string   "encrypted_password"
-    t.string   "salt"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "document_id"
+    t.string   "password_digest"
   end
 
 end

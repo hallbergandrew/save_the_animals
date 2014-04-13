@@ -12,6 +12,7 @@ gem 'jquery-turbolinks'
 gem 'foundation-rails'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'therubyracer'
+gem 'paperclip'
 
 group :development do
   gem 'better_errors'
