@@ -9,4 +9,9 @@ class User < ActiveRecord::Base
 
   validates_uniqueness_of :email
 
+  after_create :send_welcome_message #, other callbacks..
+
+  def send_welcome_message
+    UserMailer.signup_confirmation(self).deliver
+  end
 end
