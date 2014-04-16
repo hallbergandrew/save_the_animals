@@ -18,3 +18,10 @@ fixes jquery repeats... config/environments/development.rb
 
 it refreshes the page for us in development mode.
 
+To do
+
+- Add profiles_upload controller so that we can mass upload profiles from craigslist or other adoption sites.
+
+or
+
+- create store with products that can be mass uploaded.

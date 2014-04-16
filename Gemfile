@@ -12,11 +12,14 @@ gem 'jquery-turbolinks'
 gem 'foundation-rails'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'therubyracer'
+gem 'paperclip'
+# gem 'smarter_csv'
 
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'quiet_assets'
+  gem "letter_opener", :group => :development
 end
 
 group :test, :development do

@@ -1,5 +1,6 @@
 SaveAnimals::Application.routes.draw do
-  root :to => 'animals#index'
+
+  root :to => 'profiles#index'
 
   resources :animals do
     resources :breeds
@@ -17,6 +18,13 @@ SaveAnimals::Application.routes.draw do
 
   resources :countries
   resources :states
+
+get 'signup', to: 'users#new', as: 'signup'
+get 'login', to: 'sessions#new', as: 'login'
+delete 'logout', to: 'sessions#destroy', as: 'logout'
+
+resources :sessions
+
 
 
 
