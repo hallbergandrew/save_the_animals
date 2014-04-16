@@ -21,39 +21,54 @@
     <li class="toggle-topbar menu-icon "><a href="#">Menu</a></li>
   </ul>
 
+<section class="top-bar-section">
     <% if current_user %>
       Logged in as <%= current_user.email %>
-      <%= link_to "Log Out", logout_path, method: "delete", :class => "tiny success button" %>
-      <% else %>
 
-    <%= link_to "Sign Up", signup_path, :class => "tiny button" %>
-    <%= link_to "Log In", login_path, :class => "tiny button" %>
-      <% end %>
-
-
-
-  <section class="top-bar-section ">
     <!-- Right Nav Section -->
     <ul class="right">
-      <li class="active "><a href="/users">Sign up!</a></li>
-      <li class="has-dropdown ">
+      <li class="pink">
+      <div class="pink">
+      <%= link_to "New Post", new_profile_path, :class => "tiny secondary button" %>
+      </div>
+      </li>
+      <li>
         <div class="pink">
-          <a href="/users/new">Sign in</a>
+          <%= link_to "User Account", profiles_path, :class => "tiny button" %>
         </div>
-        <ul class="dropdown blue">
-          <li><a href="#">Log in</a></li>
-          <li><a href="#">Support</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
+      </li>
+      <li>
+        <div class="pink">
+          <%= link_to "Log Out", logout_path, method: "delete", :class => "tiny success button" %>
+        </div>
       </li>
     </ul>
+
+      <% else %>
+
+
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li>
+      <div class="pink">
+      <%= link_to "Sign Up", signup_path, :class => "tiny success button" %>
+      </div>
+      </li>
+      <li>
+        <div class="pink">
+          <%= link_to "Log In", login_path, :class => "tiny button" %>
+        </div>
+      </li>
+    </ul>
+
+    <% end %>
 
     <!-- Left Nav Section -->
     <ul class="left">
       <li class="has-form">
         <div class="row collapse">
           <div class="large-8 small-9 columns">
-            <input type="text" placeholder="Search">
+            <input type="text" placeholder="Fix this">
           </div>
           <div class="large-4 small-3 columns">
             <a href="#" class="alert button expand">Go</a>
