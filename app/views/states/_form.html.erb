@@ -14,8 +14,8 @@
     <%= f.text_field :name %>
   </div>
    <div class="form-group">
-    <%= f.collection_select :country_id, Country.order(:name),:id,:name%>
+    <%= f.collection_select :country_id, Country.order(:name),:id,:name, include_blank: true %>
   </div>
 
-  <%= f.submit(:class => "btn btn-primary") %>
+  <%= f.submit(:class => "tiny button") %>
 <% end %>
