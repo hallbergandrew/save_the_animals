@@ -1,0 +1,21 @@
+<% if object != nil %>
+  <% if object.errors.any? %>
+    <ul>
+      <% object.errors.full_messages.each do |message| %>
+       <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  <% end %>
+
+<%= form_for(object) do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+   <div class="form-group">
+    <%= f.collection_select :country_id, Country.order(:name),:id,:name%>
+  </div>
+
+  <%= f.submit(:class => "btn btn-primary") %>
+<% end %>

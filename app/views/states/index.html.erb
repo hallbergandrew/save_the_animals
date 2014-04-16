@@ -1,0 +1,11 @@
+<h1> All States</h1>
+<ul>
+<% @states.each do |state| %>
+  <li><%=link_to "#{state.name}", state_path(state) %> ||
+      <%= link_to "Delete", state_path(state),
+              :confirm => "You sure?",
+              :method => "delete" %></li>
+  <% end %>
+</ul>
+
+<%= link_to "New State", new_state_path, :class "button" %>

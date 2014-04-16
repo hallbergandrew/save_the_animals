@@ -1,8 +1,8 @@
 <h1> All Countries</h1>
 <ul>
 <% @countries.each do |country| %>
-  <li><%=link_to "#{country.name}", country_path(country) %>
-      <li><%= link_to "Delete", country_path(country),
+  <li><%=link_to "#{country.name}", country_path(country) %> | |
+      <%= link_to "Delete", country_path(country),
               :confirm => "You sure?",
               :method => "delete" %></li>
   <% end %>

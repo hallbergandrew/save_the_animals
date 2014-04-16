@@ -16,6 +16,7 @@ SaveAnimals::Application.routes.draw do
   end
 
   resources :countries
+  resources :states
 
 
 
