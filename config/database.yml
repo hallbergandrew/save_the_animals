@@ -8,6 +8,7 @@ test:
 
 production:
   adapter: postgresql
+  database: save_animals_production
   encoding: unicode
   pool: 5
 
