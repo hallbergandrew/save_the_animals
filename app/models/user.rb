@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   has_many :profiles
-  has_many :documents
+  has_and_belongs_to_many :documents
 
   validates :email, :presence => true
   validates :email, uniqueness: true
