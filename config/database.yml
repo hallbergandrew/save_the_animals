@@ -5,3 +5,26 @@ development:
 test:
   adapter: postgresql
   database: save_animals_test
+
+production:
+  adapter: postgresql
+  database: save_animals_production
+  encoding: unicode
+  pool: 5
+
+
+   production:
+
+   adapter: postgresql
+
+-  database: trash_production
+
++  encoding: unicode
+
++  database: myapp_production
+
++  pool: 5
+
++  username: myapp
+
++  password:

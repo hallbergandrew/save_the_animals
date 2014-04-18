@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails'
+gem 'rails', "4.0.4"
 gem 'pg'
 gem 'sass-rails'
 gem 'uglifier'
@@ -13,7 +13,12 @@ gem 'foundation-rails'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'therubyracer'
 gem 'paperclip'
+
 # gem 'smarter_csv'
+
+group :production do
+  gem 'rails_12factor'
+end
 
 group :development do
   gem 'better_errors'
@@ -29,3 +34,5 @@ end
 group :test do
   gem 'shoulda-matchers'
 end
+
+ruby "2.1.0"
